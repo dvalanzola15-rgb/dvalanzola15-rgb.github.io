@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Defines the character encoding and responsive viewport -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Title displayed in the browser tab -->
+  <title>DNS Quiz</title>
+
+  <!-- Shared stylesheet used by every page -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Website header -->
+  <header>
+    <h1>DNS Self-Assessment Quiz</h1>
+  </header>
+
+  <!-- Consistent navigation menu -->
+  <nav aria-label="Main navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="history.html">History</a></li>
+      <li><a href="howdnsworks.html">How DNS Works</a></li>
+      <li><a href="concepts.html">Key Concepts</a></li>
+      <li><a href="quiz.html" class="active" aria-current="page">Quiz</a></li>
+      <li><a href="references.html">References</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main page content -->
+  <main>
+    <section class="quiz-intro">
+      <h2>DNS Self-Assessment</h2>
+      <p>
+        Complete all five questions. Each question is worth 20 points. A score of
+        70 or higher is considered passing.
+      </p>
+    </section>
+
+    <!-- The form contains text, radio, and checkbox controls required by the assignment -->
+    <form id="dnsQuiz" class="quiz-form" novalidate>
+      <fieldset>
+        <legend>Question 1: Fill in the blank</legend>
+        <label for="q1">DNS translates domain names into numerical ______ addresses.</label>
+        <input type="text" id="q1" name="q1" autocomplete="off">
+        <div id="feedback1" class="question-feedback" aria-live="polite"></div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Question 2: Multiple choice</legend>
+        <p>What is the main purpose of DNS?</p>
+        <label><input type="radio" name="q2" value="encrypt"> Encrypt every website</label>
+        <label><input type="radio" name="q2" value="translate"> Translate domain names into network information</label>
+        <label><input type="radio" name="q2" value="design"> Design web page layouts</label>
+        <label><input type="radio" name="q2" value="store"> Store every website on one server</label>
+        <div id="feedback2" class="question-feedback" aria-live="polite"></div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Question 3: Multiple choice</legend>
+        <p>Which server directs a resolver toward the correct top-level domain?</p>
+        <label><input type="radio" name="q3" value="mail"> Mail server</label>
+        <label><input type="radio" name="q3" value="root"> Root server</label>
+        <label><input type="radio" name="q3" value="web"> Web server</label>
+        <label><input type="radio" name="q3" value="database"> Database server</label>
+        <div id="feedback3" class="question-feedback" aria-live="polite"></div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Question 4: Multiple choice</legend>
+        <p>What does DNSSEC primarily add to DNS?</p>
+        <label><input type="radio" name="q4" value="speed"> Faster Internet service</label>
+        <label><input type="radio" name="q4" value="storage"> Unlimited record storage</label>
+        <label><input type="radio" name="q4" value="authentication"> Authentication through digital signatures</label>
+        <label><input type="radio" name="q4" value="html"> Automatic HTML validation</label>
+        <div id="feedback4" class="question-feedback" aria-live="polite"></div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Question 5: Select all correct answers</legend>
+        <p>Which components can participate in a complete DNS lookup?</p>
+        <label><input type="checkbox" name="q5" value="resolver"> Recursive resolver</label>
+        <label><input type="checkbox" name="q5" value="root"> Root server</label>
+        <label><input type="checkbox" name="q5" value="tld"> TLD server</label>
+        <label><input type="checkbox" name="q5" value="authoritative"> Authoritative name server</label>
+        <label><input type="checkbox" name="q5" value="printer"> Network printer</label>
+        <div id="feedback5" class="question-feedback" aria-live="polite"></div>
+      </fieldset>
+
+      <div class="quiz-actions">
+        <button type="submit">Submit Quiz</button>
+        <button type="button" id="resetQuiz" class="secondary-button">Retake Quiz</button>
+      </div>
+    </form>
+
+    <!-- JavaScript writes the pass/fail result and total score here -->
+    <section id="quizResults" class="quiz-results" aria-live="polite" hidden>
+      <h2>Your Results</h2>
+      <p id="passFail"></p>
+      <p id="totalScore"></p>
+    </section>
+  </main>
+
+  <!-- Required course-project footer -->
+  <footer>
+  <p>
+    DNS Explained |
+    <a href="https://ksuweb.github.io/IT3203/" target="_blank" rel="noopener">
+      IT3203 Web Development Project
+    </a>
+    | David Valanzola
+  </p>
+</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

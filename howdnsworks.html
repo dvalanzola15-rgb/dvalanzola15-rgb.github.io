@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How DNS Works | DNS Explained</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Shared site header and responsive navigation menu -->
+    <header><h1>DNS Explained</h1><p>From a domain name to an IP address</p></header>
+    <nav aria-label="Main navigation"><ul>
+<li><a href="index.html" >Home</a></li>
+<li><a href="history.html" >History</a></li>
+<li><a href="howdnsworks.html" class="active" aria-current="page">How DNS Works</a></li>
+<li><a href="concepts.html" >Key Concepts</a></li>
+<li><a href="references.html" >References</a></li>
+<li><a href="about.html" >About</a></li>
+<li><a href="quiz.html" >Quiz</a></li>
+</ul></nav>
+    <main>
+        <!-- Numbered explanation of a typical DNS lookup -->
+        <section>
+            <h2>Steps in a DNS Lookup</h2>
+            <ol>
+                <li>A user enters a domain name into a browser.</li>
+                <li>The browser and operating system check their caches for a recent answer.</li>
+                <li>If no answer is cached, a recursive resolver begins the lookup.</li>
+                <li>The resolver asks a root server where to find the correct top-level domain server.</li>
+                <li>The top-level domain server directs the resolver to the authoritative name server.</li>
+                <li>The authoritative server returns the requested DNS record.</li>
+                <li>The resolver gives the IP address to the browser, which then connects to the website.</li>
+            </ol>
+            <img class="content-image" src="images/dns-network.svg" alt="DNS lookup process from browser to website">
+        </section>
+
+        <section>
+            <h2>Common DNS Record Types</h2>
+            <div class="table-container">
+                <table>
+                    <thead><tr><th>Record</th><th>Purpose</th><th>Example Use</th></tr></thead>
+                    <tbody>
+                        <tr><td>A</td><td>Maps a name to an IPv4 address</td><td>Connecting example.com to 192.0.2.1</td></tr>
+                        <tr><td>AAAA</td><td>Maps a name to an IPv6 address</td><td>Connecting a domain to an IPv6 host</td></tr>
+                        <tr><td>CNAME</td><td>Creates an alias for another domain name</td><td>Pointing www to a main domain</td></tr>
+                        <tr><td>MX</td><td>Identifies mail servers</td><td>Directing email for a domain</td></tr>
+                        <tr><td>TXT</td><td>Stores text-based information</td><td>Email verification and security policies</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Caching and Performance</h2>
+            <p>DNS caching reduces repeated work. A resolver can store an answer for the amount of time defined by the record's Time to Live value. Caching improves speed and decreases traffic, but outdated cached information can remain until the Time to Live expires.</p>
+        </section>
+    </main>
+    <!-- Shared footer used on every project page -->
+    <footer>
+  <p>
+    DNS Explained |
+    <a href="https://ksuweb.github.io/IT3203/" target="_blank" rel="noopener">
+      IT3203 Web Development Project
+    </a>
+    | David Valanzola
+  </p>
+</footer>
+</body>
+</html>

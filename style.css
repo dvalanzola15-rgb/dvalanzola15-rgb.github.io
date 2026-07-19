@@ -1,0 +1,347 @@
+/* Shared color palette and page-wide layout */
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background: #eef3f8;
+    color: #222;
+    line-height: 1.6;
+}
+
+header {
+    background: #003366;
+    color: white;
+    padding: 24px 16px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 8px;
+}
+
+header p {
+    margin: 0;
+}
+
+/* Consistent navigation menu used on every page */
+nav {
+    background: #00509e;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 14px 16px;
+}
+
+nav a:hover,
+nav a:focus,
+nav a.active {
+    background: #0077cc;
+}
+
+main {
+    width: 90%;
+    max-width: 1050px;
+    margin: 24px auto;
+    padding: 24px;
+    background: white;
+    border: 1px solid #c9d3dd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    flex: 1;
+}
+
+section {
+    margin-bottom: 28px;
+}
+
+h2,
+h3 {
+    color: #003366;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 28px;
+    align-items: center;
+}
+
+.hero img,
+.content-image,
+.profile-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid #c9d3dd;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.card,
+.key,
+/* Milestone 2 quiz formatting */
+.quiz-intro {
+    margin-bottom: 28px;
+    padding: 20px;
+    border-left: 6px solid #00509e;
+    border-radius: 8px;
+    background: #eef6fd;
+}
+
+.quiz-intro h2 {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.quiz-intro p {
+    margin-bottom: 0;
+}
+
+.quiz-form {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.quiz-form fieldset {
+    margin: 0 0 22px;
+    padding: 22px;
+    border: 1px solid #c9d3dd;
+    border-radius: 8px;
+    background: #f8fbfe;
+}
+
+.quiz-form legend {
+    padding: 0 10px;
+    color: #003366;
+    font-weight: bold;
+}
+
+.quiz-form fieldset p {
+    margin-top: 4px;
+    margin-bottom: 14px;
+    font-weight: bold;
+}
+
+.quiz-form fieldset label {
+    display: block;
+    margin: 9px 0;
+    padding: 10px 12px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background: white;
+    cursor: pointer;
+}
+
+.quiz-form fieldset label:hover,
+.quiz-form fieldset label:focus-within {
+    border-color: #8fa4b8;
+    background: #eef6fd;
+}
+
+.quiz-form input[type="text"] {
+    width: 100%;
+    max-width: 520px;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #8fa4b8;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.quiz-form input[type="radio"],
+.quiz-form input[type="checkbox"] {
+    min-width: 18px;
+    min-height: 18px;
+    margin-right: 8px;
+    vertical-align: middle;
+    accent-color: #00509e;
+}
+
+.question-feedback {
+    margin-top: 12px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.question-feedback:empty {
+    display: none;
+}
+
+.correct {
+    color: #145c2e;
+    border-left: 5px solid #2e8b57;
+    background: #e9f7ef;
+}
+
+.incorrect {
+    color: #8a1c1c;
+    border-left: 5px solid #c0392b;
+    background: #fdeeee;
+}
+
+.quiz-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.secondary-button {
+    color: #243447;
+    border: 1px solid #8fa2b4;
+    background: #e6edf3;
+}
+
+.secondary-button:hover,
+.secondary-button:focus {
+    color: #243447;
+    background: #d5e0e9;
+}
+
+.quiz-results {
+    margin-top: 24px;
+    padding: 20px;
+    border: 2px solid #00509e;
+    border-radius: 8px;
+    background: #f4faff;
+    text-align: center;
+}
+
+.pass {
+    color: #145c2e;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.fail {
+    color: #a12622;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.reference-list li {
+    margin-bottom: 14px;
+}
+
+footer {
+    background: #003366;
+    color: white;
+    text-align: center;
+    padding: 16px;
+}
+
+
+footer a {
+    color: white;
+    text-decoration: underline;
+}
+
+footer a:hover,
+footer a:focus {
+    color: #dceaf7;
+}
+
+/* Tablet layout: narrower cards, stacked hero, and vertical navigation */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav a {
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    main {
+        width: 94%;
+        padding: 18px;
+        margin: 16px auto;
+    }
+
+    .hero,
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .profile-image {
+        max-width: 260px;
+        justify-self: center;
+    }
+}
+
+/* Phone layout: single-column content and full-width form controls */
+@media screen and (max-width: 480px) {
+    header {
+        padding: 18px 12px;
+    }
+
+    header h1 {
+        font-size: 1.7rem;
+    }
+
+    main {
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+        border-left: none;
+        border-right: none;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .button-link,
+    button,
+    input[type="text"],
+    select,
+    textarea {
+        width: 100%;
+        max-width: none;
+    }
+
+    .quiz-form fieldset {
+        padding: 14px;
+    }
+
+    .quiz-actions {
+        flex-direction: column;
+    }
+
+    .quiz-actions button {
+        width: 100%;
+    }
+
+    table {
+        font-size: 14px;
+    }
+}

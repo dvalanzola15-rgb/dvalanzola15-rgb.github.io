@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History | DNS Explained</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Shared site header and responsive navigation menu -->
+    <header><h1>DNS Explained</h1><p>How DNS developed into a global naming system</p></header>
+    <nav aria-label="Main navigation"><ul>
+<li><a href="index.html" >Home</a></li>
+<li><a href="history.html" class="active" aria-current="page">History</a></li>
+<li><a href="howdnsworks.html" >How DNS Works</a></li>
+<li><a href="concepts.html" >Key Concepts</a></li>
+<li><a href="references.html" >References</a></li>
+<li><a href="about.html" >About</a></li>
+<li><a href="quiz.html" >Quiz</a></li>
+</ul></nav>
+    <main>
+        <!-- Main research content: development of DNS -->
+        <section>
+            <h2>The Early Internet Naming Problem</h2>
+            <p>Before DNS, Internet hosts were identified through a centrally maintained file called HOSTS.TXT. Each participating computer needed an updated copy of the file. This method worked while the network was small, but it became difficult to maintain as the number of connected systems increased.</p>
+            <p>A centralized file created delays, duplication, and a growing risk of name conflicts. The Internet needed a distributed system that could divide responsibility among many organizations.</p>
+            <img class="content-image" src="images/dns-history.svg" alt="Timeline showing major developments in DNS history">
+        </section>
+
+        <section>
+            <h2>The Creation of DNS</h2>
+            <p>Paul Mockapetris designed the Domain Name System in 1983. The system introduced a hierarchy that begins with the root, continues through top-level domains such as .com and .org, and ends with domains managed by individual organizations.</p>
+            <p>RFC 1034 and RFC 1035, published in 1987, documented the core concepts, message formats, and implementation rules that continue to influence DNS today. The distributed design made the system scalable because no single server had to store every domain name.</p>
+        </section>
+
+        <section>
+            <h2>Security and Privacy Developments</h2>
+            <p>Traditional DNS was designed primarily for availability and performance, not strong authentication or privacy. DNSSEC adds digital signatures that help resolvers verify that DNS records have not been altered. DNS over HTTPS sends DNS queries through encrypted HTTPS connections, reducing the ability of outside observers to view or modify those requests while they travel across a network.</p>
+        </section>
+    </main>
+    <!-- Shared footer used on every project page -->
+    <footer>
+  <p>
+    DNS Explained |
+    <a href="https://ksuweb.github.io/IT3203/" target="_blank" rel="noopener">
+      IT3203 Web Development Project
+    </a>
+    | David Valanzola
+  </p>
+</footer>
+</body>
+</html>

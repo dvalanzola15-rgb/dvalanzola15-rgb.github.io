@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" role="img" aria-labelledby="title desc">
+<title id="title">DNS history timeline</title><desc id="desc">Timeline showing the hosts file, DNS invention, DNSSEC, and DNS over HTTPS.</desc>
+<rect width="900" height="420" fill="#eef6fd"/>
+<line x1="90" y1="210" x2="810" y2="210" stroke="#00509e" stroke-width="8"/>
+<g font-family="Arial" text-anchor="middle" fill="#003366">
+<circle cx="130" cy="210" r="18" fill="#0077cc"/><text x="130" y="150" font-size="24">1970s</text><text x="130" y="270" font-size="18">HOSTS.TXT</text><text x="130" y="294" font-size="18">central list</text>
+<circle cx="350" cy="210" r="18" fill="#0077cc"/><text x="350" y="150" font-size="24">1983</text><text x="350" y="270" font-size="18">DNS designed</text><text x="350" y="294" font-size="18">by Mockapetris</text>
+<circle cx="570" cy="210" r="18" fill="#0077cc"/><text x="570" y="150" font-size="24">1990s</text><text x="570" y="270" font-size="18">DNSSEC work</text><text x="570" y="294" font-size="18">begins</text>
+<circle cx="790" cy="210" r="18" fill="#0077cc"/><text x="790" y="150" font-size="24">2018</text><text x="790" y="270" font-size="18">DNS over HTTPS</text><text x="790" y="294" font-size="18">standardized</text>
+</g>
+</svg>
